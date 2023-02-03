@@ -1,4 +1,6 @@
 //stockbroker.cs
+// CECS475 - Lab 1
+// Beatriz Sonsoles Encinas Muñoz
 
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,7 @@
 //stock.cs
+// CECS475 - Lab 1
+// Beatriz Sonsoles Encinas Muñoz
+
 using System.Collections.Generic;
 using System.Text;
 using System.Threading;
