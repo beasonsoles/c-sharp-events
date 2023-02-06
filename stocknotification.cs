@@ -3,6 +3,7 @@
 // Beatriz Sonsoles Encinas Muñoz
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -13,7 +14,7 @@ namespace Stock
 		public string StockName { get; set; }
 		public int CurrentValue { get; set; }
 		public int NumChanges { get; set; }
-		
+
 		/// <summary>
 		/// Stock notification attributes that are set and changed
 		/// </summary>
@@ -33,7 +34,7 @@ namespace Stock
 // ------------------------------------------
 // Extras:
 //string titles = "Broker".PadRight(16) + "Stock".PadRight(16) + "Value".PadRight(16) + "Changes".PadRight(10) + "Date and Time";
-		
+
 //Console.WriteLine(titles);
 //string destPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Lab1_output.txt");
 
