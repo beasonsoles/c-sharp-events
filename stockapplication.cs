@@ -11,7 +11,7 @@ namespace StockApplication
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time");
+			//Console.WriteLine("Broker".PadRight(10) + "Stock".PadRight(15) + "Value".PadRight(10) + "Changes".PadRight(10) + "Date and Time");
 
 			Stocks stock1 = new Stocks("Technology", 160, 5, 15);
 			Stocks stock2 = new Stocks("Retail", 30, 2, 6);

@@ -13,20 +13,20 @@ namespace Stock
 	{
 		public event EventHandler<StockNotification> StockEvent;
 
-        //Name of our stock.
+        // Name of our stock.
         public string StockName { get; set; }
-        //Starting value of the stock.
+        // Starting value of the stock.
         public int InitialValue { get; set; }
-        //Max change of the stock that is possible.
+        // Max change of the stock that is possible.
         public int CurrentValue { get; set; }
-        //Threshold value where we notify subscribers to the event.
+        // Threshold value where we notify subscribers to the event.
         public int MaxChange { get; set; }
-        //Amount of changes the stock goes through.
+        // Amount of changes the stock goes through.
         public int Threshold { get; set; }
-        //Current value of the stock.
+        // Current value of the stock.
         public int NumChanges { get; set; }
 
-        //Thread that modifies the stock value every 500 milliseconds
+        // Thread that modifies the stock value every 500 milliseconds
         private readonly Thread _thread;
 
 		/// <summary>
@@ -59,23 +59,8 @@ namespace Stock
 			}
 		}
 
-		// delegate
-		//public delegate void StockNotifications(String stockName, int currentValue, int numberChanges);
-		// event
-		//public event StockNotifications ProcessComplete;
-
-		//      public void Notify(String stockName, int currentValue, int numberChanges)
-		//      {
-		//          OnProcessCompleted(stockName, currentValue, numberChanges);
-		//      }
-		//protected virtual void OnProcessCompleted(String stockName, int currentValue, int numberChanges)
-		//      {
-		//          // if the process is completed, then call delegate to raise the event
-		//          ProcessComplete?.Invoke(stockName, currentValue, numberChanges);
-		//      }
-
 		/// <summary>
-		/// Changes the stock value and also raising the event of stock value changes
+		/// Changes the stock value and raises the event when stock value changes
 		/// </summary>
 		public void ChangeStockValue()
 		{
@@ -83,7 +68,7 @@ namespace Stock
 			CurrentValue += rand.Next(1, MaxChange);
 			NumChanges++;
 			if ((CurrentValue - InitialValue) > Threshold)
-			{ //RAISE THE EVENT
+			{ // Raise the event
 				StockEvent?.Invoke(this, new StockNotification(StockName, CurrentValue, NumChanges));
 			}
 		}
